@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+# Adams Jabali | Data Science & Full-Stack Portfolio
 
-## Project info
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-FFAB00?style=for-the-badge&logo=lucide&logoColor=black)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A premium, interactive personal portfolio website designed to showcase a unique blend of **Data Science** expertise and **Full-stack Development** skills. Built with modern web technologies, this portfolio offers a fluid, high-performance experience with real-time data integration.
 
-## How can I edit this code?
+🚀 **Live Demo**: [jabali-porfolio.vercel.app](https://jabali-porfolio.vercel.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 📊 Dynamic GitHub Intelligence
+*   **Live Stats Engine**: Integrates directly with the GitHub API to fetch real-time repository counts, star counts, and follower metrics.
+*   **Top Technology Stack**: Automatically calculates and displays the percentage distribution of programming languages from all repositories.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📧 Integrated Communication Channel
+*   **Direct-to-Inbox Messaging**: Integrated with **EmailJS** and **Google API**, allowing visitors to send messages directly from the site.
+*   **Intelligent Validation**: Includes form status feedback with animated success and error states.
 
-**Use your preferred IDE**
+### 🎯 Core Expertise Highlights
+*   **Multi-Domain Showcase**: Dedicated interactive sections for **AI & Machine Learning**, **Full-Stack Synergy**, **Data Engineering**, and **Applied Analytics**.
+*   **Interactive Tabs**: A smooth, tabbed interface for exploring **Biography**, **Education (Meru University)**, and **Experience (KUCCPS Internship)**.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🎨 Premium Aesthetics
+*   **Glassmorphism UI**: Uses blurred, semi-transparent backgrounds for a modern "Apple-style" appearance.
+*   **Fluid Animations**: Powered by **Framer Motion** for smooth scroll reveals, hover interactions, and tab transitions.
+*   **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop viewing.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Technology Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+*   **Frontend**: React 18, TypeScript, TailwindCSS
+*   **Build Tool**: Vite
+*   **Animations**: Framer Motion
+*   **Icons**: Lucide React
+*   **Data Fetching**: TanStack Query (React Query) & GitHub API v3
+*   **Email Service**: EmailJS Browser Layer
+*   **Deployment**: Vercel
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Getting Started
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Prerequisites
+*   Node.js (v18 or higher)
+*   npm or yarn
 
-**Edit a file directly in GitHub**
+### Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jabs007/jabali-porfolio.git
+   cd jabali-porfolio
+   ```
 
-**Use GitHub Codespaces**
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. Setup Environment Variables:
+   Create a `.env` file (or update `ContactSection.tsx`) with your **EmailJS** credentials:
+   *   `SERVICE_ID`
+   *   `TEMPLATE_ID`
+   *   `PUBLIC_KEY`
 
-## What technologies are used for this project?
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 👔 Professional Profile
 
-## How can I deploy this project?
+### **Adams Jabali Momanyi**
+**Data Scientist & Developer**
+📍 Nairobi, Kenya
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+*   **University**: Meru University of Science and Technology (BSc. Data Science - Final Year)
+*   **LinkedIn**: [adams-jabali-880377371](https://linkedin.com/in/adams-jabali-880377371)
+*   **GitHub**: [@Jabs007](https://github.com/Jabs007)
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
