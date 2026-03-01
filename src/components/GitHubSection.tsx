@@ -26,6 +26,7 @@ const GitHubSection = () => {
               <img
                 src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=dark&hide_border=true&ring=06b6d4&fire=06b6d4&stroke=06b6d4&currStreakLabel=06b6d4&background=0f172a00`}
                 alt="GitHub Streak"
+                loading="lazy"
                 className="w-full max-w-4xl h-auto mx-auto grayscale-[0.5] hover:grayscale-0 transition-all duration-700 brightness-90 hover:brightness-110"
                 onLoad={(e) => (e.currentTarget.style.opacity = "1")}
                 style={{ opacity: 0, transition: "opacity 1s ease-in-out" }}
