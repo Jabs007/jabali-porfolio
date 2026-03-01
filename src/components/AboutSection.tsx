@@ -7,7 +7,11 @@ const tabs = [
   { id: "bio", label: "Biography", icon: <User size={16} /> },
   { id: "education", label: "Education", icon: <GraduationCap size={16} /> },
   { id: "experience", label: "Experience", icon: <Briefcase size={16} /> },
+  { id: "certifications", label: "Certifications", icon: <Award size={16} /> },
 ];
+
+import pythonCert from "@/pictures/python_basic certificate.pdf";
+import sqlCert from "@/pictures/sql_basic certificate.pdf";
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("bio");
@@ -116,6 +120,49 @@ const AboutSection = () => {
                         </ul>
                       </div>
                     </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {activeTab === "certifications" && (
+                <motion.div
+                  key="certifications"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="glass-card p-10 bg-surface/30 backdrop-blur-xl border-white/5 space-y-8"
+                >
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {[
+                      {
+                        title: "Python (Basic)",
+                        issuer: "HackerRank",
+                        file: pythonCert,
+                        date: "2024",
+                      },
+                      {
+                        title: "SQL (Basic)",
+                        issuer: "HackerRank",
+                        file: sqlCert,
+                        date: "2024",
+                      },
+                    ].map((cert, i) => (
+                      <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all flex flex-col h-full group">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                          <Award size={24} />
+                        </div>
+                        <h4 className="text-lg font-bold text-foreground mb-1">{cert.title}</h4>
+                        <p className="text-primary font-semibold text-xs uppercase tracking-wider mb-4">{cert.issuer} • {cert.date}</p>
+                        <a
+                          href={cert.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-bold hover:bg-primary hover:text-primary-foreground transition-all"
+                        >
+                          View Certificate
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </motion.div>
               )}
