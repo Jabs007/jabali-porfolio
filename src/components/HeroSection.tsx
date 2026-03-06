@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Facebook, Twitter, Instagram, Linkedin, Download, Mail, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import profileImg from "@/pictures/jab.jpeg";
-import cvFile from "@/pictures/Adams_Jabali_Momanyi_CV.pdf";
+
 
 const taglineText = "Data Scientist";
 
@@ -74,18 +74,6 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* Call to Actions */}
-          <div className="flex gap-6 pt-10">
-            <motion.a
-              href={cvFile}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              className="px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-bold glow-cyan-btn flex items-center gap-2"
-            >
-              Download CV <Download size={18} />
-            </motion.a>
-          </div>
         </motion.div>
 
         {/* Right Content - Hexagon Image */}

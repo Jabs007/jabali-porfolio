@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GraduationCap, Briefcase, User, Award } from "lucide-react";
+import { GraduationCap, Briefcase, User, Award, Download } from "lucide-react";
 import MotionSection from "./MotionSection";
 
 const tabs = [
@@ -12,6 +12,7 @@ const tabs = [
 
 import pythonCert from "@/pictures/python_basic certificate.pdf";
 import sqlCert from "@/pictures/sql_basic certificate.pdf";
+import cvFile from "@/pictures/Adams_Jabali_Momanyi_CV.pdf";
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("bio");
@@ -41,6 +42,16 @@ const AboutSection = () => {
                   {tab.label}
                 </button>
               ))}
+
+              <motion.a
+                href={cvFile}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="mt-6 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-bold glow-cyan-btn flex items-center justify-center gap-2"
+              >
+                Download CV <Download size={18} />
+              </motion.a>
             </div>
           </div>
 
