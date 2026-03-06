@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Facebook, Twitter, Instagram, Linkedin, Download, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import profileImg from "@/pictures/jabs.jpeg";
+import profileImg from "@/pictures/jab.jpeg";
 import cvFile from "@/pictures/Adams_Jabali_Momanyi_CV.pdf";
 
 const taglineText = "Data Scientist";
@@ -98,19 +98,19 @@ const HeroSection = () => {
           {/* Hexagon Background Glow */}
           <div className="absolute w-[80%] aspect-square bg-primary/20 rounded-full blur-[80px] animate-glow-pulse" />
 
-          <div className="relative w-full max-w-[450px] aspect-square flex items-center justify-center p-4">
+          <div className="relative w-full max-w-[420px] aspect-[4/5] flex items-center justify-center p-4">
             {/* The Hexagon Frame */}
-            <div className="absolute inset-0 bg-primary/30 hexagon-clip rotate-3 opacity-50 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-primary/30 hexagon-portrait rotate-3 opacity-50 backdrop-blur-sm" />
 
             <motion.div
               animate={{ rotate: [3, -3, 3] }}
               transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full h-full hexagon-clip overflow-hidden border-2 border-primary/40 bg-card/40 shadow-2xl"
+              className="relative w-full h-full hexagon-portrait overflow-hidden border-2 border-primary/40 bg-card/40 shadow-2xl"
             >
               <img
                 src={profileImg}
                 alt="Adams Jabali"
-                className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500 scale-105"
+                className="w-full h-full object-cover object-[center_15%] grayscale-[0.2] hover:grayscale-0 transition-all duration-500 scale-100"
               />
             </motion.div>
 
