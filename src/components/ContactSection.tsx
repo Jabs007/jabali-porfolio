@@ -21,7 +21,7 @@ const socials = [
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:adamsjabal9@gmail.com",
+    href: "mailto:adamsjabali9@gmail.com",
     color: "hover:text-rose-400 hover:border-rose-400/50"
   },
 ];
