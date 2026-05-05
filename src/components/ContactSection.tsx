@@ -114,7 +114,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">Email me at</p>
-                    <a href="mailto:adamsjabal9@gmail.com" className="text-foreground font-semibold hover:text-primary transition-colors">adamsjabal9@gmail.com</a>
+                    <a href="mailto:adamsjabali9@gmail.com" className="text-foreground font-semibold hover:text-primary transition-colors">adamsjabali9@gmail.com</a>
                   </div>
                 </div>
 
