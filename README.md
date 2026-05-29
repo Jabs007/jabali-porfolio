@@ -15,79 +15,90 @@ A premium, interactive personal portfolio website designed to showcase a unique 
 ## ✨ Key Features
 
 ### 📊 Dynamic GitHub Intelligence
-*   **Live Stats Engine**: Integrates directly with the GitHub API to fetch real-time repository counts, star counts, and follower metrics.
-*   **Top Technology Stack**: Automatically calculates and displays the percentage distribution of programming languages from all repositories.
+
+* **Live Stats Engine**: Integrates directly with the GitHub API to fetch real-time repository counts, star counts, and follower metrics.
+* **Top Technology Stack**: Automatically calculates and displays the percentage distribution of programming languages from all repositories.
 
 ### 📧 Integrated Communication Channel
-*   **Direct-to-Inbox Messaging**: Integrated with **EmailJS** and **Google API**, allowing visitors to send messages directly from the site.
-*   **Intelligent Validation**: Includes form status feedback with animated success and error states.
+
+* **Direct-to-Inbox Messaging**: Integrated with **EmailJS** and **Google API**, allowing visitors to send messages directly from the site.
+* **Intelligent Validation**: Includes form status feedback with animated success and error states.
 
 ### 🎯 Core Expertise Highlights
-*   **Multi-Domain Showcase**: Dedicated interactive sections for **AI & Machine Learning**, **Full-Stack Synergy**, **Data Engineering**, and **Applied Analytics**.
-*   **Interactive Tabs**: A smooth, tabbed interface for exploring **Biography**, **Education (Meru University)**, and **Experience (KUCCPS Internship)**.
+
+* **Multi-Domain Showcase**: Dedicated interactive sections for **AI & Machine Learning**, **Full-Stack Synergy**, **Data Engineering**, and **Applied Analytics**.
+* **Interactive Tabs**: A smooth, tabbed interface for exploring **Biography**, **Education (Meru University)**, and **Experience (KUCCPS Internship)**.
 
 ### 🎨 Premium Aesthetics
-*   **Glassmorphism UI**: Uses blurred, semi-transparent backgrounds for a modern "Apple-style" appearance.
-*   **Fluid Animations**: Powered by **Framer Motion** for smooth scroll reveals, hover interactions, and tab transitions.
-*   **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop viewing.
+
+* **Glassmorphism UI**: Uses blurred, semi-transparent backgrounds for a modern "Apple-style" appearance.
+* **Fluid Animations**: Powered by **Framer Motion** for smooth scroll reveals, hover interactions, and tab transitions.
+* **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop viewing.
 
 ---
 
 ## 🛠️ Technology Stack
 
-*   **Frontend**: React 18, TypeScript, TailwindCSS
-*   **Build Tool**: Vite
-*   **Animations**: Framer Motion
-*   **Icons**: Lucide React
-*   **Data Fetching**: TanStack Query (React Query) & GitHub API v3
-*   **Email Service**: EmailJS Browser Layer
-*   **Deployment**: Vercel
+* **Frontend**: React 18, TypeScript, TailwindCSS
+* **Build Tool**: Vite
+* **Animations**: Framer Motion
+* **Icons**: Lucide React
+* **Data Fetching**: TanStack Query (React Query) & GitHub API v3
+* **Email Service**: EmailJS Browser Layer
+* **Deployment**: Vercel
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-*   Node.js (v18 or higher)
-*   npm or yarn
+
+* Node.js (v18 or higher)
+* npm or yarn
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Jabs007/jabali-porfolio.git
-   cd jabali-porfolio
-   ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/Jabs007/jabali-porfolio.git
+cd jabali-porfolio
+```
 
-3. Setup Environment Variables:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+1. Setup Environment Variables:
    Create a `.env` file (or update `ContactSection.tsx`) with your **EmailJS** credentials:
-   *   `SERVICE_ID`
-   *   `TEMPLATE_ID`
-   *   `PUBLIC_KEY`
+   * `SERVICE_ID`
+   * `TEMPLATE_ID`
+   * `PUBLIC_KEY`
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+1. Run the development server:
+
+```bash
+npm run dev
+```
 
 ---
 
 ## 👔 Professional Profile
 
-### **Adams Jabali Momanyi**
-**Data Scientist & Developer**
+### Adams Jabali Momanyi
+
+#### Data Scientist & Developer
+
 📍 Nairobi, Kenya
 
-*   **University**: Meru University of Science and Technology (BSc. Data Science - Final Year)
-*   **LinkedIn**: [adams-jabali-880377371](https://linkedin.com/in/adams-jabali-880377371)
-*   **GitHub**: [@Jabs007](https://github.com/Jabs007)
+* **University**: Meru University of Science and Technology (BSc. Data Science - Final Year)
+* **LinkedIn**: [adams-jabali-880377371](https://linkedin.com/in/adams-jabali-880377371)
+* **GitHub**: [@Jabs007](https://github.com/Jabs007)
 
 ---
 
 ## 📄 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

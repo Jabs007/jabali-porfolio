@@ -80,14 +80,16 @@ const ProjectsSection = () => {
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">
           <span className="gradient-text">Featured Projects</span>
         </h2>
-        <div className="w-16 h-1 bg-primary rounded-full mb-8" />
+        <div className="w-16 h-1 bg-primary rounded-full mb-8" aria-hidden="true" />
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 mb-12">
+        <div className="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Project category filters">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
+              role="tab"
+              aria-selected={activeTab === cat}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 border ${activeTab === cat
                 ? "bg-primary text-primary-foreground border-primary"
                 : "bg-surface/50 text-muted-foreground border-border hover:border-primary/50"
@@ -101,6 +103,8 @@ const ProjectsSection = () => {
         <motion.div
           layout
           className="grid md:grid-cols-2 gap-8"
+          role="tabpanel"
+          aria-label="Projects list"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((p) => (
@@ -115,7 +119,7 @@ const ProjectsSection = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
+                    <div className="p-2.5 rounded-xl bg-primary/10 text-primary" aria-hidden="true">
                       {p.icon}
                     </div>
                     <div>
@@ -138,9 +142,9 @@ const ProjectsSection = () => {
                   {p.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2 mb-8" role="list" aria-label="Technologies used">
                   {p.tech.map((t) => (
-                    <span key={t} className="text-[10px] font-mono px-2 py-1 rounded bg-secondary/80 border border-border/50 text-secondary-foreground">
+                    <span key={t} className="text-[10px] font-mono px-2 py-1 rounded bg-secondary/80 border border-border/50 text-secondary-foreground" role="listitem">
                       {t}
                     </span>
                   ))}
@@ -148,11 +152,11 @@ const ProjectsSection = () => {
 
                 <div className="flex gap-6 mt-auto">
                   <a href={p.demo} className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors group/link">
-                    <ExternalLink size={16} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    <ExternalLink size={16} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" aria-hidden="true" />
                     Live Preview
                   </a>
                   <a href={p.repo} className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-                    <Github size={16} />
+                    <Github size={16} aria-hidden="true" />
                     Source
                   </a>
                 </div>

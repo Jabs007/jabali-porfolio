@@ -27,7 +27,7 @@ const SkillsSection = () => {
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">
           <span className="gradient-text">Tech Stack</span>
         </h2>
-        <div className="w-16 h-1 bg-primary rounded-full mb-12" />
+        <div className="w-16 h-1 bg-primary rounded-full mb-12" aria-hidden="true" />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat, idx) => (
@@ -42,11 +42,12 @@ const SkillsSection = () => {
               <h3 className="font-mono text-[10px] text-primary uppercase tracking-[0.2em] mb-6 font-bold border-b border-border/50 pb-2 inline-block">
                 {cat.title}
               </h3>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2.5" role="list" aria-label={`${cat.title} skills`}>
                 {cat.skills.map((s) => (
                   <span
                     key={s}
                     className="skill-badge text-xs bg-surface/50 border-border/30 hover:border-primary/40 hover:text-primary"
+                    role="listitem"
                   >
                     {s}
                   </span>

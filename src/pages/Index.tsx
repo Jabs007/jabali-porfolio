@@ -11,15 +11,25 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <div className="relative min-h-screen bg-background text-foreground scroll-smooth overflow-x-hidden font-display">
+    {/* Skip to main content link for accessibility */}
+    <a
+      href="#main-content"
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:font-bold"
+    >
+      Skip to main content
+    </a>
+
     <DynamicBackground />
     <Navbar />
-    <HeroSection />
-    <ExpertiseSection />
-    <AboutSection />
-    <ProjectsSection />
-    <SkillsSection />
-    <GitHubSection />
-    <ContactSection />
+    <main id="main-content">
+      <HeroSection />
+      <ExpertiseSection />
+      <AboutSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <GitHubSection />
+      <ContactSection />
+    </main>
     <Footer />
   </div>
 );

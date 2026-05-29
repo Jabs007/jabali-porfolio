@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const DynamicBackground = () => {
     return (
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
             {/* Primary Glow */}
             <motion.div
                 animate={{

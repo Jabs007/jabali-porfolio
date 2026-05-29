@@ -41,8 +41,8 @@ const ExpertiseSection = () => {
     return (
         <MotionSection id="expertise" className="py-24 relative overflow-hidden">
             {/* Background Decorative Rings */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] border border-primary/5 rounded-full -mr-64 -mt-32 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] border border-accent/5 rounded-full -ml-32 -mb-32 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] border border-primary/5 rounded-full -mr-64 -mt-32 pointer-events-none" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] border border-accent/5 rounded-full -ml-32 -mb-32 pointer-events-none" aria-hidden="true" />
 
             <div className="section-container">
                 <div className="text-center mb-20">
@@ -57,7 +57,7 @@ const ExpertiseSection = () => {
                     <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tighter">
                         Core <span className="gradient-text uppercase">Expertise</span>
                     </h2>
-                    <div className="w-20 h-1.5 bg-primary mx-auto rounded-full mb-8 shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
+                    <div className="w-20 h-1.5 bg-primary mx-auto rounded-full mb-8 shadow-[0_0_15px_rgba(6,182,212,0.5)]" aria-hidden="true" />
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-medium">
                         Bridging the gap between raw data complexity and high-impact digital solutions.
                     </p>
@@ -75,11 +75,11 @@ const ExpertiseSection = () => {
                             className={`relative group p-10 rounded-[32px] bg-gradient-to-br ${item.color} border ${item.borderColor} backdrop-blur-xl transition-all duration-500 h-full flex flex-col`}
                         >
                             {/* Card Glow on Hover */}
-                            <div className="absolute inset-0 rounded-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/5 pointer-events-none" />
-                            <div className="absolute -inset-[1px] rounded-[32px] bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
+                            <div className="absolute inset-0 rounded-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/5 pointer-events-none" aria-hidden="true" />
+                            <div className="absolute -inset-[1px] rounded-[32px] bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" aria-hidden="true" />
 
                             <div className="relative z-10">
-                                <div className="w-16 h-16 rounded-2xl bg-background/60 border border-white/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500">
+                                <div className="w-16 h-16 rounded-2xl bg-background/60 border border-white/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500" aria-hidden="true">
                                     {item.icon}
                                 </div>
 
@@ -88,9 +88,9 @@ const ExpertiseSection = () => {
                                     {item.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 pt-2">
+                                <div className="flex flex-wrap gap-2 pt-2" role="list" aria-label={`Technologies for ${item.title}`}>
                                     {item.techs.map(tech => (
-                                        <span key={tech} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold text-muted-foreground group-hover:border-primary/20 group-hover:text-primary/80 transition-all duration-300">
+                                        <span key={tech} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold text-muted-foreground group-hover:border-primary/20 group-hover:text-primary/80 transition-all duration-300" role="listitem">
                                             {tech}
                                         </span>
                                     ))}
@@ -98,7 +98,7 @@ const ExpertiseSection = () => {
                             </div>
 
                             {/* Decorative Corner Element */}
-                            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-40 transition-opacity">
+                            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-40 transition-opacity" aria-hidden="true">
                                 <Cpu className="w-12 h-12 rotate-45" />
                             </div>
                         </motion.div>

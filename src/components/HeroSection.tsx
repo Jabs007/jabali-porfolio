@@ -16,7 +16,6 @@ const HeroSection = () => {
         setDisplayText(taglineText.slice(0, i));
         i++;
       } else {
-        // Reset or stop
         clearInterval(interval);
       }
     }, 100);
@@ -40,11 +39,11 @@ const HeroSection = () => {
             Adams Jabali
           </h1>
           <h2 className="text-2xl sm:text-3xl font-bold flex items-center">
-            And I'm a <span className="text-primary ml-3">{displayText}</span>
-            <span className="w-[3px] h-8 bg-primary ml-1 animate-pulse" />
+            And I'm a <span className="text-primary ml-3" aria-live="polite">{displayText}</span>
+            <span className="w-[3px] h-8 bg-primary ml-1 animate-pulse" aria-hidden="true" />
           </h2>
           <div className="flex items-center gap-2 text-muted-foreground font-medium pt-1">
-            <span className="w-5 h-5 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+            <span className="w-5 h-5 flex items-center justify-center rounded-full bg-primary/10 text-primary" aria-hidden="true">
               <MapPin size={12} />
             </span>
             <span className="text-sm tracking-wide">Based in Nairobi, Kenya</span>
@@ -54,11 +53,11 @@ const HeroSection = () => {
           </p>
 
           {/* Social Links */}
-          <div className="flex gap-4 pt-6">
+          <div className="flex gap-4 pt-6" role="navigation" aria-label="Social media links">
             {[
-              { Icon: Twitter, href: "#" },
-              { Icon: Instagram, href: "#" },
-              { Icon: Linkedin, href: "https://linkedin.com/in/adams-jabali-880377371" }
+              { Icon: Twitter, href: "#", label: "Twitter" },
+              { Icon: Instagram, href: "#", label: "Instagram" },
+              { Icon: Linkedin, href: "https://linkedin.com/in/adams-jabali-880377371", label: "LinkedIn" }
             ].map((social, idx) => (
               <motion.a
                 key={idx}
@@ -68,8 +67,9 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="social-icon-btn"
+                aria-label={social.label}
               >
-                <social.Icon size={18} />
+                <social.Icon size={18} aria-hidden="true" />
               </motion.a>
             ))}
           </div>
@@ -84,11 +84,11 @@ const HeroSection = () => {
           className="relative flex justify-center lg:justify-end items-center"
         >
           {/* Hexagon Background Glow */}
-          <div className="absolute w-[80%] aspect-square bg-primary/20 rounded-full blur-[80px] animate-glow-pulse" />
+          <div className="absolute w-[80%] aspect-square bg-primary/20 rounded-full blur-[80px] animate-glow-pulse" aria-hidden="true" />
 
           <div className="relative w-full max-w-[420px] aspect-[4/5] flex items-center justify-center p-4">
             {/* The Hexagon Frame */}
-            <div className="absolute inset-0 bg-primary/30 hexagon-portrait rotate-3 opacity-50 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-primary/30 hexagon-portrait rotate-3 opacity-50 backdrop-blur-sm" aria-hidden="true" />
 
             <motion.div
               animate={{ rotate: [3, -3, 3] }}
@@ -97,21 +97,21 @@ const HeroSection = () => {
             >
               <img
                 src={profileImg}
-                alt="Adams Jabali"
+                alt="Adams Jabali - Data Scientist"
                 className="w-full h-full object-cover object-[center_15%] grayscale-[0.2] hover:grayscale-0 transition-all duration-500 scale-100"
               />
             </motion.div>
 
             {/* Floating Orbs for extra flair */}
-            <div className="absolute -top-10 -right-10 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-float" />
-            <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }} />
+            <div className="absolute -top-10 -right-10 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-float" aria-hidden="true" />
+            <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }} aria-hidden="true" />
           </div>
         </motion.div>
       </div>
 
       {/* Floating Ambient Circles */}
-      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[120px]" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[120px]" aria-hidden="true" />
     </section>
   );
 };

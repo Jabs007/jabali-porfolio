@@ -35,7 +35,6 @@ const ContactSection = () => {
     e.preventDefault();
     setStatus("submitting");
 
-    // Updated with your newly authenticated Service ID
     const SERVICE_ID = "service_2dzsjug";
     const TEMPLATE_ID = "template_i9tgnyb";
     const PUBLIC_KEY = "79vCcNT9bJt9VrfkI";
@@ -43,7 +42,6 @@ const ContactSection = () => {
     try {
       if (!formRef.current) return;
 
-      // Initialize once before sending
       emailjs.init(PUBLIC_KEY);
 
       const response = await emailjs.sendForm(
@@ -62,7 +60,6 @@ const ContactSection = () => {
       console.error("DEBUG: EmailJS Error Object:", error);
       setStatus("error");
 
-      // Specific help for 412 error
       if (error.status === 412) {
         toast.error("Dashboard Error (412): Please check reCAPTCHA or Domain settings in EmailJS.");
       } else {
@@ -76,15 +73,15 @@ const ContactSection = () => {
   return (
     <MotionSection id="contact" className="py-32 relative overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 blur-[100px] rounded-full -z-10" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 blur-[100px] rounded-full -z-10" aria-hidden="true" />
 
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tighter">
             <span className="gradient-text uppercase">Get In Touch</span>
           </h2>
-          <div className="w-20 h-1.5 bg-primary rounded-full mb-16 shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
+          <div className="w-20 h-1.5 bg-primary rounded-full mb-16 shadow-[0_0_15px_rgba(6,182,212,0.5)]" aria-hidden="true" />
 
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Info Column */}
@@ -99,7 +96,7 @@ const ContactSection = () => {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-5 group transition-all font-display">
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg" aria-hidden="true">
                     <MapPin size={22} />
                   </div>
                   <div>
@@ -109,7 +106,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-center gap-5 group transition-all font-display">
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg" aria-hidden="true">
                     <Mail size={22} />
                   </div>
                   <div>
@@ -119,7 +116,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-center gap-5 group transition-all font-display">
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300 shadow-lg" aria-hidden="true">
                     <Phone size={22} />
                   </div>
                   <div>
@@ -128,7 +125,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 {/* Social Grid */}
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4" role="navigation" aria-label="Social media links">
                   {socials.map((s) => (
                     <motion.a
                       key={s.label}
@@ -140,7 +137,7 @@ const ContactSection = () => {
                       className={`w-14 h-14 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-muted-foreground transition-all duration-300 ${s.color} hover:bg-white/10 hover:shadow-xl`}
                       aria-label={s.label}
                     >
-                      <s.icon size={24} />
+                      <s.icon size={24} aria-hidden="true" />
                     </motion.a>
                   ))}
                 </div>
@@ -158,6 +155,7 @@ const ContactSection = () => {
                 ref={formRef}
                 onSubmit={handleSubmit}
                 className="space-y-6 glass-card p-10 bg-surface/30 border-white/5 relative group overflow-hidden"
+                aria-label="Contact form"
               >
                 <AnimatePresence>
                   {status === "success" && (
@@ -166,8 +164,10 @@ const ContactSection = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
                       className="absolute inset-0 bg-background/90 backdrop-blur-md z-20 flex flex-col items-center justify-center space-y-4 text-center p-6"
+                      role="alert"
+                      aria-live="polite"
                     >
-                      <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                      <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20" aria-hidden="true">
                         <CheckCircle2 size={48} className="animate-bounce" />
                       </div>
                       <h4 className="text-2xl font-black gradient-text uppercase tracking-tighter">Message Received!</h4>
@@ -178,8 +178,9 @@ const ContactSection = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <label className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1">Your Name</label>
+                    <label htmlFor="name" className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1 block">Your Name</label>
                     <input
+                      id="name"
                       name="name"
                       type="text"
                       placeholder="John Doe"
@@ -190,8 +191,9 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1">Email Address</label>
+                    <label htmlFor="email" className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1 block">Email Address</label>
                     <input
+                      id="email"
                       name="email"
                       type="email"
                       placeholder="john@example.com"
@@ -203,8 +205,9 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1">Message</label>
+                  <label htmlFor="message" className="text-[10px] uppercase font-black text-primary tracking-[0.2em] ml-1 block">Message</label>
                   <textarea
+                    id="message"
                     name="message"
                     placeholder="Hi Adams, I'd like to collaborate on..."
                     required
@@ -221,11 +224,12 @@ const ContactSection = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   className="w-full flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-primary text-primary-foreground font-black uppercase tracking-widest transition-all duration-500 disabled:opacity-50 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)]"
+                  aria-busy={status === "submitting"}
                 >
                   {status === "submitting" ? (
-                    <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" aria-hidden="true" />
                   ) : (
-                    <>Send Message <Send size={20} /></>
+                    <>Send Message <Send size={20} aria-hidden="true" /></>
                   )}
                 </motion.button>
               </form>

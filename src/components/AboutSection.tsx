@@ -28,11 +28,15 @@ const AboutSection = () => {
             </h2>
             <div className="w-16 h-1.5 bg-primary rounded-full mb-10 shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3" role="tablist" aria-label="About section tabs">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
+                  role="tab"
+                  aria-selected={activeTab === tab.id}
+                  aria-controls={`panel-${tab.id}`}
+                  id={`tab-${tab.id}`}
                   className={`flex items-center gap-4 px-6 py-4 rounded-2xl transition-all duration-300 font-bold tracking-tight text-left border ${activeTab === tab.id
                     ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20 scale-105"
                     : "bg-surface/30 text-muted-foreground border-white/5 hover:bg-white/5 hover:text-foreground"
@@ -50,7 +54,7 @@ const AboutSection = () => {
                 whileHover={{ scale: 1.05 }}
                 className="mt-6 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-bold glow-cyan-btn flex items-center justify-center gap-2"
               >
-                Download CV <Download size={18} />
+                Download CV <Download size={18} aria-hidden="true" />
               </motion.a>
             </div>
           </div>
@@ -64,6 +68,9 @@ const AboutSection = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
+                  id="panel-bio"
+                  role="tabpanel"
+                  aria-labelledby="tab-bio"
                   className="glass-card p-10 bg-surface/30 backdrop-blur-xl border-white/5 space-y-6"
                 >
                   <h3 className="text-2xl font-bold text-foreground mb-4">Adams Jabali Momanyi</h3>
@@ -73,12 +80,12 @@ const AboutSection = () => {
                   <p className="text-muted-foreground leading-relaxed text-lg font-medium">
                     With a foundation in Python, statistical analysis, and modern web development, Adams focuses on transforming complex datasets into actionable insights and intelligent systems. Driven by curiosity, he is continuously exploring advanced AI techniques and production-ready architectures.
                   </p>
-                  <div className="pt-6 grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/5">
+                  <div className="pt-6 grid grid-cols-2 gap-4" role="list" aria-label="Statistics">
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5" role="listitem">
                       <p className="text-primary font-black text-2xl">20+</p>
                       <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">Projects Completed</p>
                     </div>
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5" role="listitem">
                       <p className="text-primary font-black text-2xl">Final Year</p>
                       <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">Year 4, Sem 2</p>
                     </div>
@@ -92,10 +99,13 @@ const AboutSection = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
+                  id="panel-education"
+                  role="tabpanel"
+                  aria-labelledby="tab-education"
                   className="glass-card p-10 bg-surface/30 backdrop-blur-xl border-white/5 space-y-8"
                 >
                   <div className="relative pl-8 border-l-2 border-primary/30">
-                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(6,182,212,0.5)]" aria-hidden="true" />
                     <p className="text-xs font-black text-primary uppercase tracking-widest mb-1">2021 - Present</p>
                     <h4 className="text-xl font-bold text-foreground">BSc. in Data Science</h4>
                     <p className="text-primary font-semibold text-sm">Meru University of Science and Technology</p>
@@ -112,11 +122,14 @@ const AboutSection = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
+                  id="panel-experience"
+                  role="tabpanel"
+                  aria-labelledby="tab-experience"
                   className="glass-card p-10 bg-surface/30 backdrop-blur-xl border-white/5 space-y-6"
                 >
                   <div className="flex flex-col gap-6">
                     <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0" aria-hidden="true">
                         <Briefcase size={24} />
                       </div>
                       <div>
@@ -141,6 +154,9 @@ const AboutSection = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
+                  id="panel-certifications"
+                  role="tabpanel"
+                  aria-labelledby="tab-certifications"
                   className="glass-card p-10 bg-surface/30 backdrop-blur-xl border-white/5 space-y-8"
                 >
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -159,11 +175,11 @@ const AboutSection = () => {
                       },
                     ].map((cert, i) => (
                       <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all flex flex-col h-full group">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform" aria-hidden="true">
                           <Award size={24} />
                         </div>
                         <h4 className="text-lg font-bold text-foreground mb-1">{cert.title}</h4>
-                        <p className="text-primary font-semibold text-xs uppercase tracking-wider mb-4">{cert.issuer} â€¢ {cert.date}</p>
+                        <p className="text-primary font-semibold text-xs uppercase tracking-wider mb-4">{cert.issuer} • {cert.date}</p>
                         <a
                           href={cert.file}
                           target="_blank"

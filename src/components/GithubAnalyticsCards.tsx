@@ -38,12 +38,26 @@ const GithubAnalyticsCards = () => {
     useEffect(() => {
         const fetchGithubData = async () => {
             try {
+                // Get GitHub token from environment variable (optional for rate limit increase)
+                const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
+                const headers: Record<string, string> = {};
+                
+                if (githubToken) {
+                    headers.Authorization = `token ${githubToken}`;
+                }
+
                 // Fetch User General Info
-                const userResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+                const userResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`, { headers });
+                if (!userResponse.ok) {
+                    throw new Error(`Failed to fetch user data: ${userResponse.status}`);
+                }
                 const userData = await userResponse.json();
 
                 // Fetch All Public Repos (max 100)
-                const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`);
+                const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`, { headers });
+                if (!reposResponse.ok) {
+                    throw new Error(`Failed to fetch repos: ${reposResponse.status}`);
+                }
                 const reposData = await reposResponse.json();
 
                 if (Array.isArray(reposData)) {

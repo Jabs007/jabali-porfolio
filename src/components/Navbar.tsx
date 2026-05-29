@@ -22,10 +22,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-4" : "py-6"
-      }`}>
-      <div className={`mx-auto max-w-5xl px-4 transition-all duration-500 ${scrolled ? "translate-y-0" : "translate-y-2"
-        }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-4" : "py-6"}`}>
+      <div className={`mx-auto max-w-5xl px-4 transition-all duration-500 ${scrolled ? "translate-y-0" : "translate-y-2"}`}>
         <div className={`flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-500 ${scrolled
           ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           : "bg-transparent border-transparent shadow-none"
@@ -57,6 +55,7 @@ const Navbar = () => {
           <button
             className="md:hidden p-2 text-foreground hover:bg-primary/10 rounded-xl transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
