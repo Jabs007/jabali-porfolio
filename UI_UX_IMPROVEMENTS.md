@@ -1,168 +1,192 @@
 # UI/UX Improvements - Adams Jabali Portfolio
 
 ## Overview
+
 This document outlines the comprehensive UI/UX improvements made to the portfolio frontend, focusing on accessibility, responsive design, performance, and modern design best practices.
 
 ---
 
-## ?? Design System Enhancements
+## Design System Enhancements
 
-### 1. **Color System**
+### 1. Color System
+
 - Maintained the existing cyan/teal primary color (HSL 190 95% 50%)
 - Enhanced color contrast ratios for better accessibility (WCAG AA compliance)
 - Added consistent color tokens across all components
 
-### 2. **Typography**
+### 2. Typography
+
 - **Display Font**: Space Grotesk (headings)
 - **Body Font**: Space Grotesk (body text)
 - **Mono Font**: JetBrains Mono (code, technical elements)
 - Improved font sizes and line heights for better readability
 - Enhanced tracking and leading for professional appearance
 
-### 3. **Spacing & Layout**
+### 3. Spacing & Layout
+
 - Consistent padding and margin system using Tailwind's scale
 - Maximum width containers (max-w-6xl) for optimal reading experience
 - Improved grid layouts with responsive breakpoints
 
 ---
 
-## ? Accessibility Improvements
+## Accessibility Improvements
 
 ### ARIA Attributes
-- ? Added ria-label to all interactive elements
-- ? Implemented ria-hidden for decorative elements
-- ? Added ole attributes for semantic structure
-- ? Implemented ria-live regions for dynamic content
-- ? Added ria-selected and ria-controls for tabs
+
+- Added aria-label to all interactive elements
+- Implemented aria-hidden for decorative elements
+- Added role attributes for semantic structure
+- Implemented aria-live regions for dynamic content
+- Added aria-selected and aria-controls for tabs
 
 ### Keyboard Navigation
-- ? All interactive elements are keyboard accessible
-- ? Focus indicators with visible outlines
-- ? Skip-to-main-content link added
-- ? Proper tab order maintained
+
+- All interactive elements are keyboard accessible
+- Focus indicators with visible outlines
+- Skip-to-main-content link added
+- Proper tab order maintained
 
 ### Screen Reader Support
-- ? Descriptive alt text for images
-- ? Semantic HTML5 elements (main, footer, nav)
-- ? Proper heading hierarchy (h1 ? h2 ? h3)
-- ? Form labels properly associated with inputs
-- ? Landmark roles for navigation and content areas
+
+- Descriptive alt text for images
+- Semantic HTML5 elements (main, footer, nav)
+- Proper heading hierarchy (h1 > h2 > h3)
+- Form labels properly associated with inputs
+- Landmark roles for navigation and content areas
 
 ### Form Accessibility
-- ? All inputs have associated labels with htmlFor
-- ? Proper input types (email, text, tel)
-- ? Error states with descriptive messages
-- ? Success feedback with ole=""alert""
+
+- All inputs have associated labels with htmlFor
+- Proper input types (email, text, tel)
+- Error states with descriptive messages
+- Success feedback with role="alert"
 
 ---
 
-## ?? Responsive Design
+## Responsive Design
 
 ### Mobile-First Approach
+
 - **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1400px)
 - **Touch Targets**: Minimum 44x44px for all interactive elements
-- **Font Scaling**: Responsive text sizes (text-sm ? text-base ? text-lg)
+- **Font Scaling**: Responsive text sizes (text-sm > text-base > text-lg)
 - **Layout Adaptation**: Single column on mobile, multi-column on desktop
 
 ### Component-Specific Responsive Features
 
 #### Navbar
+
 - Collapsible mobile menu with smooth animations
 - Touch-friendly hamburger button
 - Full-width mobile menu items
 
 #### Hero Section
+
 - Stacked layout on mobile
 - Side-by-side on desktop
 - Responsive image sizing
 
 #### Projects Grid
+
 - Single column on mobile
 - Two columns on tablet/desktop
 - Responsive card padding
 
 ---
 
-## ?? Animation & Motion
+## Animation & Motion
 
 ### Framer Motion Enhancements
+
 - **Scroll Animations**: Smooth fade-in and slide effects
 - **Hover States**: Scale, color, and shadow transitions
 - **Page Transitions**: Smooth section reveals
 - **Reduced Motion**: Respects user preferences
 
 ### Animation Performance
+
 - Hardware-accelerated transforms (translate3d, scale)
 - Optimized animation durations (200-800ms)
 - Staggered animations for lists and grids
 - GPU-friendly blur effects
 
 ### New Animations Added
-`css
+
+```css
 .animate-float - Gentle floating motion
 .animate-glow-pulse - Pulsing glow effect
 .animate-float-slow - Slow floating with rotation
 .shimmer - Shimmer effect for loading states
 .ping-slow - Slow ping for notifications
-`
+```
 
 ---
 
-## ?? Component Improvements
+## Component Improvements
 
 ### Navbar
-- ? Added aria-label to mobile toggle
-- ? Improved backdrop blur performance
-- ? Enhanced mobile menu accessibility
-- ? Smooth scroll state detection
+
+- Added aria-label to mobile toggle
+- Improved backdrop blur performance
+- Enhanced mobile menu accessibility
+- Smooth scroll state detection
 
 ### Hero Section
-- ? Added aria-live to typing text
-- ? Descriptive alt text for profile image
-- ? Social links with proper labels
-- ? Decorative elements marked aria-hidden
+
+- Added aria-live to typing text
+- Descriptive alt text for profile image
+- Social links with proper labels
+- Decorative elements marked aria-hidden
 
 ### Expertise Section
-- ? Role attributes for technology lists
-- ? Improved card hover states
-- ? Better color contrast
-- ? Enhanced visual hierarchy
+
+- Role attributes for technology lists
+- Improved card hover states
+- Better color contrast
+- Enhanced visual hierarchy
 
 ### About Section
-- ? Full tab accessibility (aria-selected, aria-controls)
-- ? Proper tabpanel implementation
-- ? Download CV button with icon
-- ? Statistics with role=""list""
+
+- Full tab accessibility (aria-selected, aria-controls)
+- Proper tabpanel implementation
+- Download CV button with icon
+- Statistics with role="list"
 
 ### Projects Section
-- ? Filter tabs with proper roles
-- ? Technology badges with role=""listitem""
-- ? External link icons marked aria-hidden
-- ? Improved card focus states
+
+- Filter tabs with proper roles
+- Technology badges with role="listitem"
+- External link icons marked aria-hidden
+- Improved card focus states
 
 ### Skills Section
-- ? Skill groups with aria-labels
-- ? Consistent badge styling
-- ? Hover effects with transitions
-- ? Better visual grouping
+
+- Skill groups with aria-labels
+- Consistent badge styling
+- Hover effects with transitions
+- Better visual grouping
 
 ### Contact Section
-- ? Form with proper labels and IDs
-- ? Input validation with aria-busy
-- ? Success message with role=""alert""
-- ? Social links with descriptive labels
+
+- Form with proper labels and IDs
+- Input validation with aria-busy
+- Success message with role="alert"
+- Social links with descriptive labels
 
 ---
 
-## ?? Technical Improvements
+## Technical Improvements
 
 ### Performance
+
 - Lazy loading for images
 - Optimized animation performance
 - Reduced re-renders with React best practices
 - Efficient CSS with Tailwind utilities
 
 ### SEO
+
 - Enhanced meta tags in index.html
 - Open Graph tags for social sharing
 - Twitter Card metadata
@@ -170,6 +194,7 @@ This document outlines the comprehensive UI/UX improvements made to the portfoli
 - Proper document structure
 
 ### Code Quality
+
 - Consistent TypeScript typing
 - Proper component composition
 - Reusable utility classes
@@ -177,10 +202,12 @@ This document outlines the comprehensive UI/UX improvements made to the portfoli
 
 ---
 
-## ?? UI Component Library
+## UI Component Library
 
 ### Enhanced Button Component
+
 New variants added:
+
 - **default**: Primary button with glow on hover
 - **glow**: Enhanced glow effect for CTAs
 - **outline**: Border-only button
@@ -188,6 +215,7 @@ New variants added:
 - **link**: Text link style
 
 New sizes:
+
 - **sm**: 9px height, compact
 - **default**: 11px height
 - **lg**: 12px height
@@ -196,7 +224,7 @@ New sizes:
 
 ---
 
-## ?? Before/After Comparison
+## Before/After Comparison
 
 | Aspect | Before | After |
 |--------|--------|-------|
@@ -213,7 +241,7 @@ New sizes:
 
 ---
 
-## ?? Next Steps (Optional Enhancements)
+## Next Steps (Optional Enhancements)
 
 1. **Dark/Light Mode Toggle**: Add theme switching capability
 2. **Loading States**: Add skeleton loaders for async content
@@ -226,9 +254,10 @@ New sizes:
 
 ---
 
-## ?? Checklist for Future Components
+## Checklist for Future Components
 
 When adding new components, ensure:
+
 - [ ] Proper ARIA attributes
 - [ ] Keyboard accessibility
 - [ ] Focus management
@@ -242,7 +271,7 @@ When adding new components, ensure:
 
 ---
 
-## ?? Accessibility Score Targets
+## Accessibility Score Targets
 
 | Tool | Target Score |
 |------|--------------|
