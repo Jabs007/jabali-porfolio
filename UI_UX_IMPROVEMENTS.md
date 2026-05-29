@@ -167,7 +167,7 @@ This document outlines the comprehensive UI/UX improvements made to the portfoli
 - Hover effects with transitions
 - Better visual grouping
 
-### Contact Section
+### Contact Form
 
 - Form with proper labels and IDs
 - Input validation with aria-busy
@@ -227,7 +227,7 @@ New sizes:
 ## Before/After Comparison
 
 | Aspect | Before | After |
-|--------|--------|-------|
+|:-------|:-------|:------|
 | ARIA Attributes | Minimal | Comprehensive |
 | Keyboard Navigation | Basic | Full support |
 | Focus Indicators | Default | Custom styled |
@@ -274,7 +274,7 @@ When adding new components, ensure:
 ## Accessibility Score Targets
 
 | Tool | Target Score |
-|------|--------------|
+|:-----|:-------------|
 | Lighthouse Accessibility | 100 |
 | axe DevTools | 0 violations |
 | WAVE | 0 errors |
