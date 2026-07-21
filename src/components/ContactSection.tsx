@@ -22,7 +22,7 @@ const socials = [
     icon: Mail,
     label: "Email",
     href: "mailto:adamsjabali9@gmail.com",
-    color: "hover:text-purple-400 hover:border-purple-400/50"
+    color: "hover:text-cyan-400 hover:border-cyan-400/50"
   },
 ];
 
@@ -74,7 +74,7 @@ const ContactSection = () => {
     <MotionSection id="contact" className="py-32 relative overflow-hidden bg-[#0C0C0C]">
       {/* Decorative Background Elements */}
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-cyan-500/5 blur-[150px] rounded-full -z-10" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-500/5 blur-[120px] rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/5 blur-[120px] rounded-full -z-10" />
 
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
@@ -85,9 +85,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
-              Get In Touch
-            </span>
+
             <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black">
               <span className="hero-heading">Let&apos;s Build</span>
               <br />

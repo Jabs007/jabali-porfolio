@@ -16,8 +16,8 @@ const expertiseData = [
     title: "Full-Stack Development",
     description: "Building non-blocking, scalable web applications that bridge the gap between heavy data processing backends and high-performance frontends.",
     icon: Terminal,
-    gradient: "from-purple-500/20 to-pink-500/20",
-    borderColor: "border-purple-500/30",
+    gradient: "from-cyan-500/20 to-blue-500/20",
+    borderColor: "border-blue-500/30",
     techs: ["React", "Flask", "PostgreSQL"],
     number: "02"
   },
@@ -46,7 +46,7 @@ const ExpertiseSection = () => {
     <MotionSection id="expertise" className="py-32 relative overflow-hidden bg-[#0C0C0C]">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] border border-cyan-500/5 rounded-full -mr-48 -mt-32 pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] border border-purple-500/5 rounded-full -ml-48 -mb-32 pointer-events-none" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] border border-cyan-500/5 rounded-full -ml-48 -mb-32 pointer-events-none" aria-hidden="true" />
 
       <div className="section-container relative z-10">
         {/* Section Header */}
@@ -56,9 +56,7 @@ const ExpertiseSection = () => {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
-            My Specialized Areas
-          </span>
+
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight">
             <span className="hero-heading">Expertise</span>
           </h2>

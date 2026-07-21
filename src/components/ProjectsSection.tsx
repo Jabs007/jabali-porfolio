@@ -69,7 +69,7 @@ const ProjectsSection = () => {
           style={{ y: useTransform(scrollYProgress, [0, 1], [0, -100]) }}
         />
         <motion.div 
-          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px]"
+          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px]"
           style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
         />
       </div>
@@ -82,11 +82,11 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="inline-block px-6 py-2.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-black uppercase tracking-widest mb-8">
+          <span className="inline-block px-6 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-black uppercase tracking-widest mb-8">
             My Projects
           </span>
           <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight">
-            <span className="bg-gradient-to-b from-[#BBCCD7] to-[#646973] bg-clip-text text-transparent">
+            <span className="hero-heading">
               Projects
             </span>
             <br />
@@ -102,8 +102,8 @@ const ProjectsSection = () => {
             const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6 - index * 0.12]);
             const y = useTransform(scrollYProgress, [0, 1], [0, index * 60]);
 
-            const borderColor = project.color === "cyan" ? "border-cyan-500/20 hover:border-cyan-500/40" : "border-purple-500/20 hover:border-purple-500/40";
-            const accentColor = project.color === "cyan" ? "text-cyan-400" : "text-purple-400";
+            const borderColor = project.color === "cyan" ? "border-cyan-500/20 hover:border-cyan-500/40" : "border-cyan-500/20 hover:border-purple-500/40";
+            const accentColor = project.color === "cyan" ? "text-cyan-400" : "text-cyan-400";
             const glowColor = project.color === "cyan" ? "group-hover:shadow-cyan-500/20" : "group-hover:shadow-purple-500/20";
 
             return (

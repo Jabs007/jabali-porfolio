@@ -35,10 +35,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} id="home" className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden bg-[#0C0C0C]">
+    <section ref={containerRef} id="home" className="relative min-h-[calc(100dvh-5rem)] flex flex-col justify-center pt-16 overflow-hidden bg-[#0C0C0C]">
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-cyan-500 origin-left z-50"
         style={{ scaleX }}
       />
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
       {/* Ambient Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] animate-float" />
-        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-float-slow" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px] animate-float-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/5 rounded-full blur-[150px]" />
       </div>
 
@@ -58,7 +58,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-left space-y-5"
+          className="text-left space-y-4"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,7 +150,7 @@ const HeroSection = () => {
           className="relative flex justify-center lg:justify-end items-center"
         >
           {/* Glow Effect - adjusted size */}
-          <div className="absolute w-[90%] aspect-square bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-glow-pulse" aria-hidden="true" />
+          <div className="absolute w-[90%] aspect-square bg-cyan-500/10 rounded-full blur-[100px] animate-glow-pulse" aria-hidden="true" />
 
           <motion.div
             className="relative w-full max-w-[380px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] xl:max-w-[540px] aspect-square"
@@ -181,7 +181,7 @@ const HeroSection = () => {
 
           <MagneticCursor strength={0.5} padding={80}>
             <motion.div
-              className="absolute -bottom-4 -left-4 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-500/20 backdrop-blur-md border border-purple-500/30 text-purple-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider"
+              className="absolute -bottom-4 -left-4 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-500/30 text-cyan-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >

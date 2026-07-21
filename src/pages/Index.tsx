@@ -9,8 +9,9 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSection from "@/components/BlogSection";
 import GitHubSection from "@/components/GitHubSection";
 import ContactSection from "@/components/ContactSection";
+
 import Footer from "@/components/Footer";
-import MarqueeSection from "@/components/MarqueeSection";
+
 
 const Index = () => (
   <div className="relative min-h-screen bg-[#0C0C0C] text-foreground scroll-smooth overflow-x-hidden font-display">
@@ -26,8 +27,7 @@ const Index = () => (
     <Navbar />
     <main id="main-content">
       <HeroSection />
-      <MarqueeSection />
-      <ExpertiseSection />
+        <ExpertiseSection />
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />

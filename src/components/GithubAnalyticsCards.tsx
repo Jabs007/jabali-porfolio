@@ -130,7 +130,7 @@ const GithubAnalyticsCards = () => {
             >
                 <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
                     <Terminal className="text-primary" />
-                    <span className="gradient-text">Live Statistics</span>
+                    <span>Live Statistics</span>
                 </h3>
 
                 <div className="grid grid-cols-2 gap-6">
@@ -159,7 +159,7 @@ const GithubAnalyticsCards = () => {
             >
                 <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
                     <Cpu className="text-primary" />
-                    <span className="gradient-text">Top Technology Stack</span>
+                    <span>Top Technology Stack</span>
                 </h3>
 
                 <div className="space-y-6">

@@ -11,7 +11,7 @@ const GitHubSection = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] pointer-events-none -z-10" aria-hidden="true" />
 
         <h2 className="text-3xl sm:text-4xl font-black mb-2 flex items-center gap-2">
-          <span className="gradient-text tracking-tighter uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-xl skew-x-[-10deg]">GitHub Intelligence</span>
+          <span className="text-cyan-400 tracking-tighter uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-xl">GitHub Intelligence</span>
         </h2>
         <div className="w-16 h-1 bg-primary rounded-full mb-16" aria-hidden="true" />
 

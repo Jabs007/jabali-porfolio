@@ -15,10 +15,10 @@ export function FloatingShapes() {
   
   const shapes: FloatingShape[] = useMemo(() => [
     { position: [3, 2, -2], rotation: [0.5, 0.3, 0.2], scale: 0.8, color: "#06b6d4", shape: "icosahedron" },
-    { position: [-3, -2, -3], rotation: [0.3, 0.5, 0.1], scale: 0.6, color: "#a855f7", shape: "sphere" },
+    { position: [-3, -2, -3], rotation: [0.3, 0.5, 0.1], scale: 0.6, color: "#06b6d4", shape: "sphere" },
     { position: [2, -3, -1], rotation: [0.4, 0.2, 0.3], scale: 0.7, color: "#06b6d4", shape: "box" },
-    { position: [-2, 3, -2], rotation: [0.2, 0.4, 0.5], scale: 0.5, color: "#a855f7", shape: "icosahedron" },
-    { position: [0, 0, -4], rotation: [0.6, 0.1, 0.4], scale: 0.9, color: "#3b82f6", shape: "sphere" },
+    { position: [-2, 3, -2], rotation: [0.2, 0.4, 0.5], scale: 0.5, color: "#06b6d4", shape: "icosahedron" },
+    { position: [0, 0, -4], rotation: [0.6, 0.1, 0.4], scale: 0.9, color: "#06b6d4", shape: "sphere" },
   ], []);
 
   useFrame((state) => {
@@ -39,19 +39,19 @@ export function FloatingShapes() {
           {shape.shape === "box" && (
             <mesh>
               <boxGeometry args={[1, 1, 1]} />
-              <meshStandardMaterial color={shape.color} transparent opacity={0.3} wireframe />
+              <meshStandardMaterial color={shape.color} transparent opacity={0.6} emissive={shape.color} emissiveIntensity={0.5} />
             </mesh>
           )}
           {shape.shape === "sphere" && (
             <mesh>
               <sphereGeometry args={[0.6, 32, 32]} />
-              <meshStandardMaterial color={shape.color} transparent opacity={0.3} wireframe />
+              <meshStandardMaterial color={shape.color} transparent opacity={0.6} emissive={shape.color} emissiveIntensity={0.5} />
             </mesh>
           )}
           {shape.shape === "icosahedron" && (
             <mesh>
               <icosahedronGeometry args={[0.7, 0]} />
-              <meshStandardMaterial color={shape.color} transparent opacity={0.3} wireframe />
+              <meshStandardMaterial color={shape.color} transparent opacity={0.6} emissive={shape.color} emissiveIntensity={0.5} />
             </mesh>
           )}
         </group>
